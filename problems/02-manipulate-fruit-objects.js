@@ -7,10 +7,19 @@ value to each fruit object
 console.log(addKeyAndValueToAll(fruits, "inStock", true));
 // returns array of 31 fruits, and each fruit object includes "inStock: true"
 */
+//? Input : array , key , value
+//? Output: array with each object that has the key value pair passed in
 
 function addKeyAndValueToAll(array, key, value) {
-    // Your code here 
+   newArr=[]
+   for (let fruitObjects of array){
+    // console.log(fruitObjects)
+    if (fruitObjects[key] = value) newArr.push(array)
+   }
+   return newArr;
 }
+
+console.log(addKeyAndValueToAll(fruits, "inStock", true));
 
 /* 08. `addKeyAndValueToOne()` - Return object at the given index array, adding the given key and
 value to that fruit object
@@ -20,7 +29,7 @@ console.log(addKeyAndValueToOne(fruits, "color", "red", 1));
 */
 
 function addKeyAndValueToOne(array, key, value, index) {
-    // Your code here 
+    // Your code here
 }
 
 /* 09. `updateKeyName()` - Change the old key name to the new key name in all
@@ -32,7 +41,7 @@ console.log(updateKeyName(fruits, "nutritions", "nutrition"));
 */
 
 function updateKeyName(array, oldKey, newKey) {
-    // Your code here 
+    // Your code here
 }
 
 /* 10. `updateIdValues()` - Change all of the "id" values to six-character
@@ -49,7 +58,7 @@ console.log(updateIdValues(fruits));
 */
 
 function updateIdValues(array) {
-    // Your code here 
+    // Your code here
 }
 
 /* 11. `deleteKeysandValues()` - Delete the keyToDelete from the nutritions
@@ -60,9 +69,9 @@ console.log(deleteKeysAndValues(fruits, "sugar"));
 */
 
 function deleteKeysAndValues(array, keyToDelete) {
-    // Your code here 
-}
 
+}
+console.log(deleteKeysAndValues(fruits, "sugar"));
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 
 module.exports = [ addKeyAndValueToAll, addKeyAndValueToOne, updateKeyName, updateIdValues, deleteKeysAndValues ];

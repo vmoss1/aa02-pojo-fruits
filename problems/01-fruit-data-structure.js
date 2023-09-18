@@ -10,10 +10,10 @@ console.log(firstFruitObject(fruits));
 */
 
 function firstFruitObject(fruits) {
-  return fruits[0];
+  return fruits[0]
 }
 
-//console.log(firstFruitObject(fruits));
+// console.log(firstFruitObject(fruits));
 
 /* 02. `lastFruitObject()` - Return the last object in the fruits array
 
@@ -24,10 +24,10 @@ order: 'Cucurbitales', nutritions: { carbohydrates: 8, protein: 0.6, fat:
 */
 
 function lastFruitObject(fruits) {
-  return fruits[fruits.length - 1];
+return fruits[fruits.length -1];
 }
 
-//console.log(lastFruitObject(fruits));
+// console.log(lastFruitObject(fruits));
 
 /* 03. `indexFruitObject()` - Return one object at the given index from the
 fruits array. The function should have two parameters, the array and the
@@ -40,15 +40,16 @@ console.log(indexFruitObject(17, fruits));
 */
 
 function indexFruitObject(index, fruits) {
-  return fruits[index];
+ return fruits[index]
 }
 
-//console.log(indexFruitObject(17, fruits));
+// console.log(indexFruitObject(17, fruits));
 
 /* 04. `fruitNames()` - Return a list of all of the fruit names
 
 console.log(fruitNames(fruits));
-// [ 'Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cherry', 'Durian',
+
+[ 'Apple', 'Apricot', 'Banana', 'Blackberry', 'Blueberry', 'Cherry', 'Durian',
     'Fig', 'Gooseberry', 'Grapes', 'GreenApple', 'Guava', 'Kiwi', 'Lemon',
     'Lime', 'Lingonberry', 'Lychee', 'Mango', 'Melon', 'Orange', 'Papaya',
     'Passionfruit', 'Pear', 'Persimmon', 'Pineapple', 'Plum', 'Raspberry',
@@ -56,15 +57,15 @@ console.log(fruitNames(fruits));
 */
 
 function fruitNames(fruits) {
-  fruitName = [];
-  for (let i = 0; i < fruits.length; i++) {
-    let fruit = fruits[i];
-    fruitName.push(fruit.name);
+  let newArr = [];
+  for(let names of fruits) {
+    // console.log(names)
+     newArr.push(names.name)
   }
-  return fruitName;
+  return newArr;
 }
 
-//console.log(fruitNames(fruits));
+// console.log(fruitNames(fruits));
 
 /* 05. `getFruitKeys()` - Return a list of all of the keys for each fruit record.
 NOTE: Call a function you previously wrote as a helper function.
@@ -74,12 +75,14 @@ NOTE: Call a function you previously wrote as a helper function.
 */
 
 function getFruitKeys(fruits) {
-  for (let fruit of fruits) {
-    let keys = Object.keys(fruit);
-    return keys;
-  }
+
+for (let keys of fruits){
+  let key = Object.keys(keys);
+  return key;
 }
-//console.log(getFruitKeys(fruits));
+
+}
+// console.log(getFruitKeys(fruits));
 
 /* 06. `getNutritionsKeys()` - Return a list of all of the keys within each
 "nutritions" object.
@@ -91,12 +94,11 @@ console.log(getNutritionsKeys(fruits));
 */
 //console.log(fruits);
 function getNutritionsKeys(fruits) {
-  for (let fruit in fruits) {
-    let info = fruits[fruit];
-    let nutritionInfo = info.nutritions;
-    let keys = Object.keys(nutritionInfo);
-    return keys;
-  }
+  for (let keys of fruits){
+   let key = keys.nutritions;
+ let key1 = Object.keys(key)
+ return key1;
+}
 }
 
 console.log(getNutritionsKeys(fruits));
