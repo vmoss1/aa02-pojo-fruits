@@ -10,7 +10,7 @@ console.log(firstFruitObject(fruits));
 */
 
 function firstFruitObject(fruits) {
-  return fruits[0]
+  return fruits[0];
 }
 
 // console.log(firstFruitObject(fruits));
@@ -24,7 +24,7 @@ order: 'Cucurbitales', nutritions: { carbohydrates: 8, protein: 0.6, fat:
 */
 
 function lastFruitObject(fruits) {
-return fruits[fruits.length -1];
+  return fruits[fruits.length - 1];
 }
 
 // console.log(lastFruitObject(fruits));
@@ -40,7 +40,7 @@ console.log(indexFruitObject(17, fruits));
 */
 
 function indexFruitObject(index, fruits) {
- return fruits[index]
+  return fruits[index];
 }
 
 // console.log(indexFruitObject(17, fruits));
@@ -58,9 +58,8 @@ console.log(fruitNames(fruits));
 
 function fruitNames(fruits) {
   let newArr = [];
-  for(let names of fruits) {
-    // console.log(names)
-     newArr.push(names.name)
+  for (let objects of fruits) {
+    newArr.push(objects.name);
   }
   return newArr;
 }
@@ -75,15 +74,14 @@ NOTE: Call a function you previously wrote as a helper function.
 */
 
 function getFruitKeys(fruits) {
-
-for (let keys of fruits){
-  let key = Object.keys(keys);
-  return key;
+  for (let fruit of fruits) {
+    let keys = Object.keys(fruit);
+    return keys;
+  }
 }
 
-}
 // console.log(getFruitKeys(fruits));
-
+//
 /* 06. `getNutritionsKeys()` - Return a list of all of the keys within each
 "nutritions" object.
 NOTE: Can you use a different approach than what you used in the previous
@@ -94,11 +92,10 @@ console.log(getNutritionsKeys(fruits));
 */
 //console.log(fruits);
 function getNutritionsKeys(fruits) {
-  for (let keys of fruits){
-   let key = keys.nutritions;
- let key1 = Object.keys(key)
- return key1;
-}
+  for (let objects of fruits) {
+    let keys = Object.keys(objects.nutritions);
+    return keys;
+  }
 }
 
 console.log(getNutritionsKeys(fruits));
